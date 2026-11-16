@@ -1,0 +1,9 @@
+chiave,nome,tipo,quota_da_comprare,cap_mld,costo_oggi,anno_controllo,P(51 % ≤10 anni),P(51 % ≤20 anni),P(51 % ≤30 anni),anno_100,nota
+Poste,Poste Italiane,quotata,0.0,18.3,0.0,0.0,1.0,1.0,1.0,12.0,GIÀ controllata: al sistema pubblico basta il 51 %
+Terna,Terna,quotata,0.21100000000000002,14.0,4.067658000000001,2.0,0.9999166666666667,1.0,1.0,14.0,"rete elettrica, bassa beta · CDP ~30 %"
+Snam,Snam,quotata,0.201,17.0,4.705209000000001,4.0,0.9995833333333334,0.9999166666666667,1.0,16.0,"gasdotti, regolata · CDP ~31 %"
+Leonardo,Leonardo,quotata,0.20800000000000002,30.0,8.592480000000002,6.0,0.95125,0.9945,0.99775,17.0,"difesa, alta volatilità · MEF ~30 %"
+ILVA,ILVA (Taranto),non_quotata,1.0,,14.0,1.0,1.0,1.0,1.0,1.0,non un acquisto: un salvataggio (vedi §11.3)
+TIMrete,TIM rete (NetCo),non_quotata,0.9,,17.0,5.0,0.9779166666666667,0.9983333333333333,0.9993333333333333,5.0,venduta a KKR nel 2024: si ricompra · CDP ~10 %
+ENI,ENI,quotata,0.41800000000000004,48.0,27.628128,3.0,0.9455833333333333,0.99525,0.9975833333333334,18.0,"petrolifero, ciclico · MEF 4,4 % + CDP 4,8 %"
+ENEL,ENEL,quotata,0.274,75.0,28.297350000000005,10.0,0.59,0.9590833333333333,0.9863333333333333,25.0,"utility regolata, dividendo alto · MEF ~24 %"

@@ -1,0 +1,9 @@
+chiave,nome,tipo,cap_mld,quota_pub,target,premio_mult,mu,sigma,div_yield,costo_diretto,recupero,nota,quota_da_comprare,residuo_privato,costo_oggi
+ENEL,ENEL,quotata,75.0,0.236,0.51,1.0,0.08,0.22,0.045,,1.0,"utility regolata, dividendo alto · MEF ~24 %",0.274,0.49,28.297350000000005
+ENI,ENI,quotata,48.0,0.092,0.51,1.0,0.072,0.25,0.04,,1.0,"petrolifero, ciclico · MEF 4,4 % + CDP 4,8 %",0.41800000000000004,0.49,27.628128
+Leonardo,Leonardo,quotata,30.0,0.302,0.51,1.0,0.1,0.33,0.015,,1.0,"difesa, alta volatilità · MEF ~30 %",0.20800000000000002,0.49,8.592480000000002
+Snam,Snam,quotata,17.0,0.309,0.51,1.0,0.065,0.19,0.036,,1.0,"gasdotti, regolata · CDP ~31 %",0.201,0.49,4.705209000000001
+Terna,Terna,quotata,14.0,0.299,0.51,1.0,0.068,0.17,0.038,,1.0,"rete elettrica, bassa beta · CDP ~30 %",0.21100000000000002,0.49,4.067658000000001
+Poste,Poste Italiane,quotata,18.3,0.643,0.51,1.0,0.075,0.22,0.045,,1.0,GIÀ controllata: al sistema pubblico basta il 51 %,0.0,0.357,0.0
+TIMrete,TIM rete (NetCo),non_quotata,,0.1,1.0,0.0,0.055,0.28,0.015,17.0,1.0,venduta a KKR nel 2024: si ricompra · CDP ~10 %,0.9,0.0,17.0
+ILVA,ILVA (Taranto),non_quotata,,0.0,1.0,0.0,0.045,0.3,0.0,14.0,0.4,non un acquisto: un salvataggio (vedi §11.3),1.0,0.0,14.0

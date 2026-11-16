@@ -42,22 +42,26 @@ mercati,mercati.uniform_drift_reale,0.01,float,Drift reale nella modalità 'unif
 mercati,mercati.uniform_semilarghezza_reale,0.03,float,Semilarghezza ±3 % reale (specifica originale)
 mercati,mercati.fee_gestione,0.0015,float,Costo di gestione annuo
 mercati,mercati.slippage_su_afflussi,0.003,float,Costo di transazione sull'investimento degli afflussi
-mercati,mercati.btp_quota,0.3,float,Quota del fondo in BTP
-mercati,mercati.btp_politica,constant,str,constant | glide | equity_only
-mercati,mercati.btp_quota_max,0.6,float,Quota BTP a fine glide-path
-mercati,mercati.btp_anni_glide,15.0,float,Durata del glide-path
+mercati,mercati.btp_politica,max_carry,str,max_carry | tatticale | constant | equity_only
+mercati,mercati.btp_quota,0.3,float,Quota in BTP (solo politiche 'constant' e scenario passivo)
+mercati,mercati.btp_duration_max,10.0,float,Scadenza massima acquistabile (anni) — tetto al rischio di prezzo
 mercati,mercati.btp_yield_lungo,0.035,float,BTP 10 anni: tasso di lungo periodo (media di ritorno)
-mercati,mercati.btp_ou_kappa,0.25,float,Velocità di mean reversion dei tassi
-mercati,mercati.btp_ou_sigma,0.011,float,Volatilità annua dei tassi
-mercati,mercati.btp_duration,7.5,float,Duration modificata del portafoglio BTP
-mercati,mercati.btp_convessita,0.7,float,Convessità (effetto di secondo ordine)
+mercati,mercati.btp_ou_kappa,0.25,float,Velocità di mean reversion del livello dei tassi
+mercati,mercati.btp_ou_sigma,0.011,float,Volatilità annua del livello dei tassi
+mercati,mercati.btp_slope_iniziale,0.01,float,Pendenza iniziale della curva (30 anni − 10 anni)
+mercati,mercati.btp_slope_kappa,0.35,float,Velocità di mean reversion della pendenza
+mercati,mercati.btp_slope_sigma,0.005,float,Volatilità annua della pendenza
+mercati,mercati.btp_convessita,0.0,float,Convessità: C(τ) = moltiplicatore · τ²
+mercati,mercati.tatticale_avversione,3.0,float,Avversione al rischio della regola tatticale (γ)
 mercati,mercati.spread_shock_anno,-1,int,Anno dello shock di spread (-1 = nessuno)
 mercati,mercati.spread_shock_bp,300.0,float,Entità dello shock in punti base
 mercati,mercati.quota_non_residenti,0.27,float,Quota del debito detenuta da non residenti (~27 %)
 benchmark,benchmark.premio_controllo,0.35,float,Premio di controllo pagato ai privati
 benchmark,benchmark.impatto_mercato,0.02,float,Costo di impatto sul mercato
 benchmark,benchmark.quota_controllo,0.51,float,Quota necessaria per il controllo (51 %)
-benchmark,benchmark.riserva_minima,0.5,float,
+benchmark,benchmark.riserva_minima,0.5,float,Cassa libera minima dopo un acquisto (% del NAV)
+benchmark,benchmark.soglia_residuo,0.02,float,Premio minimo vs BTP per comprare il residuo (fase 2)
+benchmark,benchmark.max_acquisti_anno,1,int,Quante operazioni al massimo in un anno
 spesa,spesa.regola,eccesso_su_baseline,str,Come si calcola il dividendo sociale
 spesa,spesa.payout_quota,0.3,float,Quota del surplus distribuita
 spesa,spesa.payout_max_nav,0.03,float,Tetto annuo in % del patrimonio
