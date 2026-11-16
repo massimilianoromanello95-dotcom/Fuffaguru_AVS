@@ -1,0 +1,13 @@
+# artefatti locali
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store
+.~lock.*
+
+# ambienti virtuali
+.venv/
+venv/
+
+# NOTA: figures/ e results/ sono versionati di proposito: sono l'output
+# del notebook e servono a leggere i risultati senza rieseguirlo.

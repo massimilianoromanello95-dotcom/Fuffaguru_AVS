@@ -1,0 +1,18 @@
+# Dipendenze di Fuffaguru_AVS
+# Installazione:  pip install -r requirements.txt
+#
+# Le prime quattro sono obbligatorie; emcee è opzionale (c'è un fallback
+# interno Metropolis-Hastings con la stessa interfaccia).
+
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scipy>=1.10
+
+# opzionale, ma consigliato: sampler ensemble per l'MCMC
+emcee>=3.1
+
+# per eseguire il notebook
+jupyterlab>=4.0
+nbconvert>=7.0
+ipykernel>=6.20

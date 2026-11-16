@@ -1,0 +1,85 @@
+Gruppo,Parametro,Valore,Tipo,Note / fonte
+fonti,fonti.rcf_magazzino_mld,1200.0,float,Magazzino residuo AdER: cartelle/ruoli non riscossi (1.100–1.300)
+fonti,fonti.rcf_tasso_realizzo_annuo,0.0095,float,"Incasso annuo / magazzino: ~0,9 %/anno"
+fonti,fonti.rcf_costo_riscossione,0.12,float,Costi di gestione della riscossione coattiva
+fonti,fonti.rcf_shock_efficienza,0.2,float,Shock annuo ±20 % sull'efficienza del fisco (specifica)
+fonti,fonti.rcf_elasticita_pil,1.0,float,Elasticità delle entrate alla crescita del PIL
+fonti,fonti.rcf_moltiplicatore_regime_avverso,0.6,float,Riduzione se il governo è ostile
+fonti,fonti.ipp_soglia_euro,500000.0,float,Soglia di esenzione: 500 k€ di patrimonio netto
+fonti,fonti.ipp_aliquota,0.001,float,"Aliquota: 0,1 % sulla parte eccedente"
+fonti,fonti.ipp_ricchezza_netta_mld,10800.0,float,"Ricchezza netta famiglie italiane (BdI, ~10.800 mld)"
+fonti,fonti.ipp_quota_oltre_soglia,0.68,float,Quota di ricchezza sopra la soglia (~68 %)
+fonti,fonti.ipp_compliance,0.85,float,"Quota effettivamente incassabile (erosione, elusione, costi)"
+fonti,fonti.ipp_costi_gestione_mld,0.4,float,Costi amministrativi annui
+fonti,fonti.ipp_elasticita_pil,1.2,float,I patrimoni crescono più del PIL
+fonti,fonti.ipp_moltiplicatore_regime_avverso,0.0,float,0 = abolita se vince una maggioranza ostile
+fonti,fonti.isa_n_imprese_sopra_soglia,4000.0,float,Imprese italiane con valore > 50 mln €
+fonti,fonti.isa_anni_ricambio,35.0,float,Turnover generazionale della proprietà
+fonti,fonti.isa_valore_medio_partecipazione_mld,0.22,float,Valore medio della quota trasferita (220 mln €)
+fonti,fonti.isa_aliquota_media,0.06,float,Aliquota media effettiva (4 % + progressività)
+fonti,fonti.isa_soglia_dimensione_mln,50.0,float,Soglia dimensionale dell'impresa (mln €)
+fonti,fonti.isa_lumpiness,0.45,float,Irregolarità: poche successioni enormi (Poisson-composto)
+fonti,fonti.isa_elasticita_pil,1.0,float,Elasticità al PIL
+fonti,fonti.isa_moltiplicatore_regime_avverso,0.0,float,0 = abolita se vince una maggioranza ostile
+macro,macro.gdp_nominale_crescita,0.025,float,Crescita del PIL nominale (media di lungo periodo)
+macro,macro.gdp_sigma,0.012,float,Volatilità della crescita
+macro,macro.gdp_floor,-0.05,float,
+macro,macro.gdp_cap,0.07,float,
+macro,macro.inflazione_media,0.02,float,Inflazione media attesa
+macro,macro.inflazione_sigma,0.01,float,Volatilità dell'inflazione
+macro,macro.inflazione_floor,-0.01,float,
+macro,macro.inflazione_cap,0.12,float,
+politica,politica.p_fav_a_avv,0.08,float,P(governo favorevole → avverso) per anno
+politica,politica.p_avv_a_fav,0.4,float,P(governo avverso → favorevole) per anno
+politica,politica.regime_iniziale,0,int,0 = si parte con una maggioranza favorevole
+politica,politica.shock_entrate_sigma,0.1,float,Rumore residuo sulle entrate totali
+politica,politica.anno_abolizione,-1,int,
+mercati,mercati.alpha_mode,t_student,str,t_student (default) oppure uniform (±3 % reale)
+mercati,mercati.drift_atteso,0.055,float,Rendimento nominale atteso del portafoglio (prior MCMC)
+mercati,mercati.sigma_alpha,0.16,float,Volatilità del portafoglio
+mercati,mercati.t_nu,5.0,float,Gradi di libertà della t di Student (code grasse)
+mercati,mercati.uniform_drift_reale,0.01,float,Drift reale nella modalità 'uniform'
+mercati,mercati.uniform_semilarghezza_reale,0.03,float,Semilarghezza ±3 % reale (specifica originale)
+mercati,mercati.fee_gestione,0.0015,float,Costo di gestione annuo
+mercati,mercati.slippage_su_afflussi,0.003,float,Costo di transazione sull'investimento degli afflussi
+mercati,mercati.btp_quota,0.3,float,Quota del fondo in BTP
+mercati,mercati.btp_politica,constant,str,constant | glide | equity_only
+mercati,mercati.btp_quota_max,0.6,float,Quota BTP a fine glide-path
+mercati,mercati.btp_anni_glide,15.0,float,Durata del glide-path
+mercati,mercati.btp_yield_lungo,0.035,float,BTP 10 anni: tasso di lungo periodo (media di ritorno)
+mercati,mercati.btp_ou_kappa,0.25,float,Velocità di mean reversion dei tassi
+mercati,mercati.btp_ou_sigma,0.011,float,Volatilità annua dei tassi
+mercati,mercati.btp_duration,7.5,float,Duration modificata del portafoglio BTP
+mercati,mercati.btp_convessita,0.7,float,Convessità (effetto di secondo ordine)
+mercati,mercati.spread_shock_anno,-1,int,Anno dello shock di spread (-1 = nessuno)
+mercati,mercati.spread_shock_bp,300.0,float,Entità dello shock in punti base
+mercati,mercati.quota_non_residenti,0.27,float,Quota del debito detenuta da non residenti (~27 %)
+benchmark,benchmark.premio_controllo,0.35,float,Premio di controllo pagato ai privati
+benchmark,benchmark.impatto_mercato,0.02,float,Costo di impatto sul mercato
+benchmark,benchmark.quota_controllo,0.51,float,Quota necessaria per il controllo (51 %)
+benchmark,benchmark.riserva_minima,0.5,float,
+spesa,spesa.regola,eccesso_su_baseline,str,Come si calcola il dividendo sociale
+spesa,spesa.payout_quota,0.3,float,Quota del surplus distribuita
+spesa,spesa.payout_max_nav,0.03,float,Tetto annuo in % del patrimonio
+spesa,spesa.anno_inizio,5,int,Primo anno in cui si può distribuire
+spesa,spesa.quota_nav_fissa,0.02,float,
+spesa,spesa.sconto_baseline_rendimento,0.015,float,
+spesa,spesa.sconto_baseline_crescita,0.0025,float,
+spesa,spesa.popolazione,58900000.0,float,Residenti (per il dividendo pro capite)
+sim,sim.anni,50,int,Orizzonte di simulazione
+sim,sim.n_paths,12000,int,Numero di traiettorie Monte Carlo
+sim,sim.n_paths_sens,2500,int,
+sim,sim.n_draws_posterior,600,int,Numero di estrazioni dal posterior
+sim,sim.seed,20261116,int,
+mcmc,mcmc.n_walkers,24,int,Numero di walker emcee
+mcmc,mcmc.n_steps,3600,int,Passi per walker
+mcmc,mcmc.n_burn,500,int,Burn-in
+mcmc,mcmc.thin,2,int,
+mcmc,mcmc.mu_prior_mu,0.055,float,Prior: rendimento atteso del paniere
+mcmc,mcmc.mu_prior_sd,0.02,float,Prior: incertezza sul rendimento atteso
+mcmc,mcmc.sigma_prior_scale,0.18,float,Prior: scala della volatilità (HalfNormal)
+mcmc,mcmc.y_prior_lo,0.005,float,Prior: minimo del tasso BTP di lungo periodo
+mcmc,mcmc.y_prior_hi,0.09,float,Prior: massimo del tasso BTP di lungo periodo
+mcmc,mcmc.infl_prior_mu,0.02,float,Prior: inflazione media
+mcmc,mcmc.infl_prior_sd,0.01,float,Prior: incertezza sull'inflazione
+mcmc,mcmc.t_nu_lik,5.0,float,
